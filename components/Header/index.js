@@ -3,15 +3,21 @@ import Head from "next/head"
 import HeaderContext from "../../Contexts/HeaderContext"
 
 import styled from "@emotion/styled"
+import { useRouter } from "next/router"
 import Link from "next/link"
 import MobileMenu from "./MobileMenu"
 import ResponsiveMenu from "./ResponsiveMenu"
+
+import data from "data/db.json"
+
 import { motion } from "framer-motion"
 import { fadeInRight } from "components/animation"
 
 export default function Header() {
-  const { homeNavs, loading } = useContext(HeaderContext)
-  const { header } = homeNavs
+  const { loading } = useContext(HeaderContext)
+
+  const router = useRouter()
+  const myData = data.outlet.find((o) => o.slug === router.query.slug)
 
   return (
     <>
@@ -32,10 +38,18 @@ export default function Header() {
                 <div className="logo">
                   <img src="images/logo.png" alt="suzuki" />
                 </div>
-                <div className="logo_text">
-                  <h3>{header.bigtext}</h3>
-                  <p>{header.smalltext}</p>
-                </div>
+
+                {myData ? (
+                  <div className="logo_text">
+                    <h3>{myData.dealer}</h3>
+                    <p>PT. Nusantara Jaya Sentosa</p>
+                  </div>
+                ) : (
+                  <div className="logo_text">
+                    <h3>PT. Nusantara Jaya Sentosa</h3>
+                    <p>Main Dealer Suzuki Jawa Barat</p>
+                  </div>
+                )}
               </motion.a>
             </Link>
 

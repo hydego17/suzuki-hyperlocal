@@ -15,7 +15,7 @@ export default function OutletCard({ item }) {
         <h3>{item.dealer}</h3>
         <p> {item.telepon}</p>
         <p>{item.lokasi}</p>
-        <Link href="/outlet">
+        <Link href="/[slug]" as={`/${item.slug}`}>
           <a className="link_primary">Kunjungi Website Outlet</a>
         </Link>
       </CardStyled>

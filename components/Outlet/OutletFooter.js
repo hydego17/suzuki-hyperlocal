@@ -2,11 +2,12 @@ import { useContext } from "react"
 import HeaderContext from "../../Contexts/HeaderContext"
 import styled from "@emotion/styled"
 
-export default function HomeFooter() {
+export default function OutletFooter({ myData }) {
+  const { dealer, lokasi, telepon } = myData
   const { homeNavs } = useContext(HeaderContext)
   const { links } = homeNavs
   return (
-    <HomeFooterStyled>
+    <OutletFooterStyled>
       <div className="container">
         <ul>
           {links.map((link) => (
@@ -21,19 +22,18 @@ export default function HomeFooter() {
       <div className="container">
         <h1>ALAMAT</h1>
         <p>
-          <strong>SUZUKI NJS BUAH BATU</strong> <br /> Jl. Soekarno - Hatta no.
-          513, Bandung
+          <strong>{dealer}</strong> <br /> {lokasi}
         </p>
 
         <button className="link_primary">CEK GOOGLE MAPS</button>
 
-        <button className="link_primary block">(022) 7300723</button>
+        <button className="link_primary block">{telepon}</button>
       </div>
-    </HomeFooterStyled>
+    </OutletFooterStyled>
   )
 }
 
-const HomeFooterStyled = styled.div`
+const OutletFooterStyled = styled.div`
   text-align: center;
 
   .container {

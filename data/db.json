@@ -6,7 +6,8 @@
       "category": "Sales, Service, Sparepart",
       "telepon": "(022) 6204645",
       "lokasi": "JL. Soekarno Hatta No. 289 Bandung 40234",
-      "gambar": "soekarno-hatta.png"
+      "gambar": "soekarno-hatta.png",
+      "slug": "soekarno-hatta1"
     },
     {
       "id": 2,
@@ -14,7 +15,8 @@
       "category": "Sales, Service, Sparepart",
       "telepon": "(022) 87836800",
       "lokasi": "JL. Raya Rancaekek Cipasir KM. 22 Rancaekek",
-      "gambar": "rancaekek.png"
+      "gambar": "rancaekek.png",
+      "slug": "rancaekek"
     },
     {
       "id": 3,
@@ -22,7 +24,8 @@
       "category": "Sales, Service, Sparepart",
       "telepon": "(022) 2030787",
       "lokasi": "JL. DR. Setiabudhi No. 78 Bandung",
-      "gambar": "setiabudhi.png"
+      "gambar": "setiabudhi.png",
+      "slug": "setiabudhi"
     },
     {
       "id": 4,
@@ -30,7 +33,8 @@
       "category": "Sales",
       "telepon": "(022) 6002512",
       "lokasi": "JL. IR.H. Juanda (Dago) No. 75 Bandung",
-      "gambar": "dago.png"
+      "gambar": "dago.png",
+      "slug": "dago"
     },
     {
       "id": 5,
@@ -38,7 +42,8 @@
       "category": "Sales",
       "telepon": "(022) 5422259",
       "lokasi": "JL. Kopo (Sayati) 260 C Bandung",
-      "gambar": "kopo.png"
+      "gambar": "kopo.png",
+      "slug": "kopo"
     },
     {
       "id": 6,
@@ -46,7 +51,8 @@
       "category": "Sales, Service, Sparepart",
       "telepon": "(022) 7101655",
       "lokasi": "JL. Jenderal Ahmad Yani 259 Bandung",
-      "gambar": "ahmad-yani.png"
+      "gambar": "ahmad-yani.png",
+      "slug": "ahmad-yani"
     },
     {
       "id": 7,
@@ -54,7 +60,8 @@
       "category": "Sales, Service, Sparepart",
       "telepon": "(022) 7300723",
       "lokasi": "JL. Soekarno – Hatta No. 513 Bandung",
-      "gambar": "buah-batu.png"
+      "gambar": "buah-batu.png",
+      "slug": "buah-batu"
     },
     {
       "id": 8,
@@ -62,7 +69,8 @@
       "category": "Sales, Service, Sparepart",
       "telepon": "(022) 6204645",
       "lokasi": "JL. Raya Cibeureum 48 B Bandung",
-      "gambar": "cibeureum.png"
+      "gambar": "cibeureum.png",
+      "slug": "cibeureum"
     },
     {
       "id": 9,
@@ -70,7 +78,8 @@
       "category": "Sales, Service, Sparepart, Body Paint",
       "telepon": "(022) 6204645",
       "lokasi": "JL. Soekarno Hatta No. 289 Bandung 40234",
-      "gambar": "soekarno-hatta.png"
+      "gambar": "soekarno-hatta.png",
+      "slug": "soekarno-hatta2"
     }
   ],
   "article": [
@@ -100,12 +109,7 @@
       { "id": 3, "nama": "Outlet" },
       { "id": 4, "nama": "Blog" },
       { "id": 5, "nama": "Promo" }
-    ],
-    "telepon": "(022) 5204645",
-    "header": {
-      "bigtext": "PT. Nusantara Jaya Sentosa",
-      "smalltext": "Main Dealer Suzuki Jawa Barat"
-    }
+    ]
   },
   "navsOutlet": {
     "links": [
@@ -115,11 +119,6 @@
       { "id": 4, "nama": "Service" },
       { "id": 5, "nama": "Sparepart" },
       { "id": 6, "nama": "Hubungi Kami" }
-    ],
-    "telepon": "(022) 7300723",
-    "header": {
-      "bigtext": "SUZUKI NJS BUAH BATU",
-      "smalltext": "PT. Nusantara Jaya Sentosa"
-    }
+    ]
   }
 }

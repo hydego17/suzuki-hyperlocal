@@ -1,26 +1,35 @@
 import { useContext } from "react"
 import HeaderContext from "../../Contexts/HeaderContext"
+import styled from "@emotion/styled"
 
 import Link from "next/link"
-import styled from "@emotion/styled"
+import { useRouter } from "next/router"
+
+import data from "data/db.json"
 
 export default function ResponsiveMenu() {
   const { openMenu, homeNavs } = useContext(HeaderContext)
-  const { links, telepon } = homeNavs
+  const { links } = homeNavs
+
+  const router = useRouter()
+  const myData = data.outlet.find((o) => o.slug === router.query.slug)
+
   return (
     <ResponsiveNav openMenu={openMenu} setOpenMenu={openMenu}>
       <div className="link">
         {links.map((link) => (
-          <Link key={link.id} href="/">
-            <a>{link.nama}</a>
-          </Link>
+          <a key={link.id} href="/">
+            {link.nama}
+          </a>
         ))}
       </div>
 
       <hr />
 
       <Link href="/">
-        <a className="link_primary block">{telepon}</a>
+        <a className="link_primary block">
+          {myData ? myData.telepon : `(022) 5204645`}
+        </a>
       </Link>
       <div className="logos">
         <a href="#">
