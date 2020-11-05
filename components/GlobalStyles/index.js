@@ -75,6 +75,7 @@ const GlobalStyles = () => (
         .link_primary {
           text-align: center;
           display: block;
+          border-radius: 2px;
           border: 2px solid #163c80;
           padding: 1rem;
           transition: all 0.3s ease;

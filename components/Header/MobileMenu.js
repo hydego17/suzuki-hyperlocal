@@ -25,6 +25,10 @@ export default function MobileMenu() {
 }
 
 const MobileStyled = styled.div`
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 3;
   border-radius: 50%;
   padding: 0.75rem;
   background: ${({ theme }) => theme.colors.primary};
