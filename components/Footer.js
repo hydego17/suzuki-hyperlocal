@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="container">
           <h1>HOTLINE 24 JAM (Bebas Pulsa)</h1>
 
-          <a href="#">
+          <a href="/">
             <img src="images/halosuzuki.png" />
           </a>
 

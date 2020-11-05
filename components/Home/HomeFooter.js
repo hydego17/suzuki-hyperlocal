@@ -26,9 +26,13 @@ export default function HomeFooter() {
           Hatta no. 289, Bojongloa Kidul Bandung 40234
         </p>
 
-        <button className="link_primary">CEK GOOGLE MAPS</button>
+        <a href="/">
+          <button className="link_primary">CEK GOOGLE MAPS</button>
+        </a>
 
-        <button className="link_primary block">(022) 5204645</button>
+        <a href="/">
+          <button className="link_primary block">(022) 5204645</button>
+        </a>
       </div>
     </HomeFooterStyled>
   )

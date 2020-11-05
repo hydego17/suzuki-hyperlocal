@@ -1,6 +1,5 @@
 import { useState, useEffect, useContext } from "react"
 import HeaderContext from "../Contexts/HeaderContext"
-import Link from "next/link"
 import styled from "@emotion/styled"
 
 import OutletCard from "components/Home/OutletCard"
@@ -11,7 +10,7 @@ import Preloader from "components/Preloader"
 import data from "../data/db.json"
 
 import { motion } from "framer-motion"
-import { fadeInUp, fadeInDown } from "components/animation"
+import { fadeInDown } from "components/animation"
 
 export default function Home() {
   const { loading, setLoading } = useContext(HeaderContext)
@@ -62,9 +61,9 @@ export default function Home() {
                   <ArticleCard key={item.id} item={item} />
                 ))}
 
-              <Link href="#">
-                <a className="link_primary">Lihat Semua Informasi</a>
-              </Link>
+              <a href="/" className="link_primary">
+                Lihat Semua Informasi
+              </a>
             </div>
           </HomeStyled>
 

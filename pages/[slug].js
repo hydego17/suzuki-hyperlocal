@@ -44,13 +44,16 @@ export default function Outlet() {
               <motion.div variants={fadeInUp}>
                 <SliderTop />
               </motion.div>
+
               {/* Car */}
               <CarOutlet />
+
               {/* Services */}
               <div>
                 <img src="images/pesan-servis.png" />
                 <img src="images/sukucadang.png" />
               </div>
+
               {/* Sticky tag */}
             </div>
           </OutletStyled>
