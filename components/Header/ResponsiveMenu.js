@@ -5,31 +5,22 @@ import Link from "next/link"
 import styled from "@emotion/styled"
 
 export default function ResponsiveMenu() {
-  const { openMenu } = useContext(HeaderContext)
+  const { openMenu, homeNavs } = useContext(HeaderContext)
+  const { links, telepon } = homeNavs
   return (
     <ResponsiveNav openMenu={openMenu} setOpenMenu={openMenu}>
       <div className="link">
-        <Link href="/">
-          <a>Beranda</a>
-        </Link>
-        <Link href="/">
-          <a>Tentang Kami</a>
-        </Link>
-        <Link href="/">
-          <a>Outlet</a>
-        </Link>
-        <Link href="/">
-          <a>Blog</a>
-        </Link>
-        <Link href="/">
-          <a>Promo</a>
-        </Link>
+        {links.map((link) => (
+          <Link key={link.id} href="/">
+            <a>{link.nama}</a>
+          </Link>
+        ))}
       </div>
 
       <hr />
 
       <Link href="/">
-        <a className="link_primary block">(022) 5204645</a>
+        <a className="link_primary block">{telepon}</a>
       </Link>
       <div className="logos">
         <a href="#">

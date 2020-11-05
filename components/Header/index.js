@@ -1,4 +1,3 @@
-import React from "react"
 import styled from "@emotion/styled"
 import Link from "next/link"
 import MobileMenu from "./MobileMenu"
@@ -44,6 +43,8 @@ const HeaderStyled = styled.header`
   box-shadow: 0 10px 10px -6px rgba(0, 0, 0, 0.1);
 
   .logo_container {
+    cursor: pointer;
+    z-index: 3;
     display: flex;
     align-items: center;
 

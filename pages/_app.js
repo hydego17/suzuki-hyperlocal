@@ -23,10 +23,11 @@ function MyApp({ Component, pageProps }) {
 
           <ContextWrapper>
             <Header />
-          </ContextWrapper>
 
-          <Component {...pageProps} />
-          <Footer />
+            <Component {...pageProps} />
+
+            <Footer />
+          </ContextWrapper>
         </ThemeProvider>
       </AnimatePresence>
     </>

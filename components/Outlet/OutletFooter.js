@@ -1,6 +1,5 @@
 import { useContext } from "react"
 import HeaderContext from "../../Contexts/HeaderContext"
-
 import styled from "@emotion/styled"
 
 export default function HomeFooter() {
@@ -22,13 +21,13 @@ export default function HomeFooter() {
       <div className="container">
         <h1>ALAMAT</h1>
         <p>
-          <strong>SUZUKI Nusantara Jaya Sentosa</strong> <br /> Jl. Soekarno -
-          Hatta no. 289, Bojongloa Kidul Bandung 40234
+          <strong>SUZUKI NJS BUAH BATU</strong> <br /> Jl. Soekarno - Hatta no.
+          513, Bandung
         </p>
 
         <button className="link_primary">CEK GOOGLE MAPS</button>
 
-        <button className="link_primary block">(022) 5204645</button>
+        <button className="link_primary block">(022) 7300723</button>
       </div>
     </HomeFooterStyled>
   )
@@ -48,7 +47,7 @@ const HomeFooterStyled = styled.div`
   }
 
   ul li {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem;
     display: inline-block;
   }
 

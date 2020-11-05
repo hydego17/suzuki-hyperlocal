@@ -92,5 +92,26 @@
       "tanggal": "16 Agustus 2020",
       "gambar": "artikel-3.png"
     }
-  ]
+  ],
+  "navsHome": {
+    "links": [
+      { "id": 1, "nama": "Beranda" },
+      { "id": 2, "nama": "Tentang Kami" },
+      { "id": 3, "nama": "Outlet" },
+      { "id": 4, "nama": "Blog" },
+      { "id": 5, "nama": "Promo" }
+    ],
+    "telepon": "(022) 5204645"
+  },
+  "navsOutlet": {
+    "links": [
+      { "id": 1, "nama": "Beranda" },
+      { "id": 2, "nama": "Tentang Kami" },
+      { "id": 3, "nama": "Mobil" },
+      { "id": 4, "nama": "Service" },
+      { "id": 5, "nama": "Sparepart" },
+      { "id": 6, "nama": "Hubungi Kami" }
+    ],
+    "telepon": "(022) 7300723"
+  }
 }
