@@ -1,15 +1,15 @@
 import styled from "@emotion/styled"
 import Link from "next/link"
 
-export default function Card({ item }) {
+export default function OutletCard({ item }) {
   return (
     <CardStyled>
-      <img src={`images/${item.gambar}`} alt={item.dealer} />
+      <img src={`images/outlet/${item.gambar}`} alt={item.dealer} />
       <p className="label">{item.category}</p>
       <h3>{item.dealer}</h3>
-      <p>{item.telepon}</p>
+      <p> {item.telepon}</p>
       <p>{item.lokasi}</p>
-      <Link href="/">
+      <Link href="/outlet">
         <a className="link_primary">Kunjungi Website Outlet</a>
       </Link>
     </CardStyled>

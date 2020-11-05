@@ -1,34 +1,67 @@
 import styled from "@emotion/styled"
-import Card from "components/Card"
+import OutletCard from "components/Home/OutletCard"
+import ArticleCard from "components/Home/ArticleCard"
+import HomeFooter from "components/Home/HomeFooter"
 import data from "../data/db.json"
+import Link from "next/link"
 
 export default function Home() {
-  const { dealer } = data
+  const { outlet, article } = data
   return (
-    <HomeStyled>
-      <div className="container banner">
-        <h1>Temukan Outlet Suzuki terdekat di daerah sekitar Anda</h1>
-      </div>
+    <>
+      <HomeStyled>
+        {/* Outlet View */}
+        <div className="container banner">
+          <h1>Temukan Outlet Suzuki terdekat di daerah sekitar Anda</h1>
+        </div>
 
-      <div className="container card">
-        {dealer.length > 0 &&
-          dealer.map((item) => <Card key={item.id} item={item} />)}
-      </div>
-    </HomeStyled>
+        <div className="container card1">
+          {outlet.length > 0 &&
+            outlet.map((item) => <OutletCard key={item.id} item={item} />)}
+        </div>
+
+        {/* Article View */}
+        <div className="container banner">
+          <h1>Informasi Terbaru</h1>
+          <p>Seputar Promo, Berita, Event dari Suzuki</p>
+        </div>
+        <div className="container card2">
+          {article.length > 0 &&
+            article.map((item) => <ArticleCard key={item.id} item={item} />)}
+
+          <Link href="#">
+            <a className="link_primary">Lihat Semua Informasi</a>
+          </Link>
+        </div>
+      </HomeStyled>
+
+      {/* Footer */}
+      <HomeFooter />
+    </>
   )
 }
 
 const HomeStyled = styled.div`
+  background-color: #f1f5f6;
   .banner {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     height: 300px;
     color: white;
     background: ${({ theme }) => theme.colors.primary};
     text-align: center;
   }
 
-  .card {
+  .container.card1 {
     transform: translateY(-2%);
+  }
+  .container.card2 {
+    transform: translateY(-5%);
+  }
+
+  img {
+    width: 100%;
   }
 `

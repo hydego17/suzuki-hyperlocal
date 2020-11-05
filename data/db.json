@@ -1,5 +1,5 @@
 {
-  "dealer": [
+  "outlet": [
     {
       "id": 1,
       "dealer": "SUZUKI NJS SOEKARNO-HATTA",
@@ -73,5 +73,24 @@
       "gambar": "soekarno-hatta.png"
     }
   ],
-  "informasi": []
+  "article": [
+    {
+      "id": 1,
+      "judul": "Promo Pembelian Berhadiah Periode Bulan September 2020",
+      "tanggal": "18 Agustus 2020",
+      "gambar": "artikel-1.png"
+    },
+    {
+      "id": 2,
+      "judul": "Suzuki Insurance – Ganti Mobil Anda Dengan Nilai yang Sama",
+      "tanggal": "17 Agustus 2020",
+      "gambar": "artikel-2.png"
+    },
+    {
+      "id": 3,
+      "judul": "Suzuki Peduli Gempa Maluku 2019, Bentuk Kepedulian Untuk Korban",
+      "tanggal": "16 Agustus 2020",
+      "gambar": "artikel-3.png"
+    }
+  ]
 }

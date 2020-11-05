@@ -23,18 +23,22 @@ const GlobalStyles = () => (
 
         html,
         body {
-          scroll-behavior: smooth;
           min-height: 100%;
           font-family: -apple-system, BlinkMacSystemFont, SFProDisplay-Regular,
             Helvetica Neue, sans-serif;
           font-size: 15px;
           letter-spacing: 0.5px;
-          background-color: #f1f5f6;
         }
 
         h1 {
           font-size: 18px;
           line-height: 1.35;
+        }
+
+        hr {
+          height: 1px;
+          background: transparent;
+          border-top: 1px solid #f6f5f1;
         }
 
         a {
@@ -48,7 +52,7 @@ const GlobalStyles = () => (
 
         img {
           object-fit: cover;
-          width: 100%;
+          max-width: 100%;
         }
 
         input {
@@ -61,8 +65,17 @@ const GlobalStyles = () => (
         }
 
         button {
-          padding: 0.5rem;
+          font-weight: bold;
+          margin: 10px auto 0 auto;
+          font-family: inherit;
+          padding: 0.5rem 1rem;
           cursor: pointer;
+          border: 0;
+
+          &:active,
+          &:focus {
+            outline: none;
+          }
         }
 
         .container {
@@ -73,12 +86,18 @@ const GlobalStyles = () => (
         }
 
         .link_primary {
+          color: #163c80;
           text-align: center;
           display: block;
           border-radius: 2px;
           border: 2px solid #163c80;
-          padding: 1rem;
+          padding: min(12px);
           transition: all 0.3s ease;
+
+          &.block {
+            color: white;
+            background-color: #163c80;
+          }
 
           &:hover {
             color: white;

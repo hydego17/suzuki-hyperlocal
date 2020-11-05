@@ -23,7 +23,6 @@ function MyApp({ Component, pageProps }) {
         </ContextWrapper>
 
         <Component {...pageProps} />
-
         <Footer />
       </ThemeProvider>
     </>
