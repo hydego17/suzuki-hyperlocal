@@ -1,4 +1,5 @@
 import { useContext } from "react"
+import Head from "next/head"
 import HeaderContext from "../../Contexts/HeaderContext"
 
 import styled from "@emotion/styled"
@@ -7,7 +8,6 @@ import MobileMenu from "./MobileMenu"
 import ResponsiveMenu from "./ResponsiveMenu"
 import { motion } from "framer-motion"
 import { fadeInRight } from "components/animation"
-import Head from "next/Head"
 
 export default function Header() {
   const { homeNavs } = useContext(HeaderContext)
