@@ -7,6 +7,7 @@ import MobileMenu from "./MobileMenu"
 import ResponsiveMenu from "./ResponsiveMenu"
 import { motion } from "framer-motion"
 import { fadeInRight } from "components/animation"
+import Head from "next/Head"
 
 export default function Header() {
   const { homeNavs } = useContext(HeaderContext)
@@ -14,6 +15,10 @@ export default function Header() {
 
   return (
     <>
+      <Head>
+        <title>Suzuki HyperLocal</title>
+        <link rel="icon" href="images/logo.png" />
+      </Head>
       <motion.div initial={"initial"} animate={"animate"} exit={{ opacity: 0 }}>
         <HeaderStyled>
           <Link href="/">

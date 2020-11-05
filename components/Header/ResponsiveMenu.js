@@ -52,7 +52,7 @@ const ResponsiveNav = styled.div`
   right: -100%;
   position: fixed;
   z-index: -99;
-  transition: all 0.5s ease;
+  transition: all 0.4s ease;
   padding: 5rem 2rem;
 
   ${({ openMenu }) =>

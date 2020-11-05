@@ -11,6 +11,7 @@ import data from "../data/db.json"
 
 import { motion } from "framer-motion"
 import { fadeInUp, fadeInDown } from "components/animation"
+import { Head } from "next/document"
 
 export default function Home() {
   const [state, setState] = useState({})
