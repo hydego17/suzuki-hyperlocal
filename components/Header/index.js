@@ -1,3 +1,6 @@
+import { useContext } from "react"
+import HeaderContext from "../../Contexts/HeaderContext"
+
 import styled from "@emotion/styled"
 import Link from "next/link"
 import MobileMenu from "./MobileMenu"
@@ -6,6 +9,9 @@ import { motion } from "framer-motion"
 import { fadeInRight } from "components/animation"
 
 export default function Header() {
+  const { homeNavs } = useContext(HeaderContext)
+  const { header } = homeNavs
+
   return (
     <>
       <motion.div initial={"initial"} animate={"animate"} exit={{ opacity: 0 }}>
@@ -16,8 +22,8 @@ export default function Header() {
                 <img src="images/logo.png" alt="suzuki" />
               </div>
               <div className="logo_text">
-                <h3>PT. Nusantara Jaya Sentosa</h3>
-                <p>Main Dealer Suzuki Jawa Barat</p>
+                <h3>{header.bigtext}</h3>
+                <p>{header.smalltext}</p>
               </div>
             </motion.a>
           </Link>

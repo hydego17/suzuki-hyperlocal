@@ -101,7 +101,11 @@
       { "id": 4, "nama": "Blog" },
       { "id": 5, "nama": "Promo" }
     ],
-    "telepon": "(022) 5204645"
+    "telepon": "(022) 5204645",
+    "header": {
+      "bigtext": "PT. Nusantara Jaya Sentosa",
+      "smalltext": "Main Dealer Suzuki Jawa Barat"
+    }
   },
   "navsOutlet": {
     "links": [
@@ -112,6 +116,10 @@
       { "id": 5, "nama": "Sparepart" },
       { "id": 6, "nama": "Hubungi Kami" }
     ],
-    "telepon": "(022) 7300723"
+    "telepon": "(022) 7300723",
+    "header": {
+      "bigtext": "SUZUKI NJS BUAH BATU",
+      "smalltext": "PT. Nusantara Jaya Sentosa"
+    }
   }
 }
