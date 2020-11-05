@@ -100,16 +100,3 @@ const HomeStyled = styled.div`
     width: 100%;
   }
 `
-
-// export async function getServerSideProps() {
-//   const res = await fetch(
-//     "https://my-json-server.typicode.com/hydego17/data-outlet/db"
-//   )
-//   const data = await res.json()
-
-//   return {
-//     props: {
-//       data,
-//     },
-//   }
-// }
