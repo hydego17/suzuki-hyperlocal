@@ -1,42 +1,52 @@
+import Link from "next/link"
 import styled from "@emotion/styled"
+
 import OutletCard from "components/Home/OutletCard"
 import ArticleCard from "components/Home/ArticleCard"
 import HomeFooter from "components/Home/HomeFooter"
+
 import data from "../data/db.json"
-import Link from "next/link"
+
+import { motion } from "framer-motion"
+import { fadeInUp, fadeInDown } from "components/animation"
 
 export default function Home() {
   const { outlet, article } = data
+
   return (
     <>
-      <HomeStyled>
-        {/* Outlet View */}
-        <div className="container banner">
-          <h1>Temukan Outlet Suzuki terdekat di daerah sekitar Anda</h1>
-        </div>
+      <motion.div initial={"initial"} animate={"animate"} exit={{ opacity: 0 }}>
+        <HomeStyled>
+          {/* Outlet View */}
+          <div className="container banner">
+            <motion.h1 variants={fadeInDown}>
+              Temukan Outlet Suzuki terdekat di daerah sekitar Anda
+            </motion.h1>
+          </div>
 
-        <div className="container card1">
-          {outlet.length > 0 &&
-            outlet.map((item) => <OutletCard key={item.id} item={item} />)}
-        </div>
+          <div className="container card1">
+            {outlet.length > 0 &&
+              outlet.map((item) => <OutletCard key={item.id} item={item} />)}
+          </div>
 
-        {/* Article View */}
-        <div className="container banner">
-          <h1>Informasi Terbaru</h1>
-          <p>Seputar Promo, Berita, Event dari Suzuki</p>
-        </div>
-        <div className="container card2">
-          {article.length > 0 &&
-            article.map((item) => <ArticleCard key={item.id} item={item} />)}
+          {/* Article View */}
+          <div className="container banner">
+            <h1>Informasi Terbaru</h1>
+            <p>Seputar Promo, Berita, Event dari Suzuki</p>
+          </div>
+          <div className="container card2">
+            {article.length > 0 &&
+              article.map((item) => <ArticleCard key={item.id} item={item} />)}
 
-          <Link href="#">
-            <a className="link_primary">Lihat Semua Informasi</a>
-          </Link>
-        </div>
-      </HomeStyled>
+            <Link href="#">
+              <a className="link_primary">Lihat Semua Informasi</a>
+            </Link>
+          </div>
+        </HomeStyled>
 
-      {/* Footer */}
-      <HomeFooter />
+        {/* Footer */}
+        <HomeFooter />
+      </motion.div>
     </>
   )
 }

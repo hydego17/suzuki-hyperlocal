@@ -58,10 +58,10 @@ const ResponsiveNav = styled.div`
   width: 300px;
   height: 100%;
   top: 0;
-  right: 0;
+  right: -100%;
   position: fixed;
   z-index: -99;
-  transition: opacity 0.5s ease;
+  transition: all 0.5s ease;
   padding: 5rem 2rem;
 
   ${({ openMenu }) =>
@@ -69,6 +69,7 @@ const ResponsiveNav = styled.div`
     `
     visibility: visible;
     opacity: 0.95;
+    right: 0;
     z-index:2;
     
   `}

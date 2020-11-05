@@ -4,22 +4,28 @@ import HeaderContext from "../../Contexts/HeaderContext"
 import styled from "@emotion/styled"
 import HamburgerMenu from "react-hamburger-menu"
 
+import { motion } from "framer-motion"
+import Animation from "components/animation"
+import { fadeInLeft } from "../animation"
+
 export default function MobileMenu() {
   const { openMenu, setOpenMenu } = useContext(HeaderContext)
 
   return (
     <MobileStyled>
-      <HamburgerMenu
-        isOpen={openMenu}
-        menuClicked={() => setOpenMenu(!openMenu)}
-        width={15}
-        height={12}
-        strokeWidth={2}
-        rotate={180}
-        color="white"
-        borderRadius={0}
-        animationDuration={0.4}
-      />
+      <motion.div variants={fadeInLeft}>
+        <HamburgerMenu
+          isOpen={openMenu}
+          menuClicked={() => setOpenMenu(!openMenu)}
+          width={15}
+          height={12}
+          strokeWidth={2}
+          rotate={180}
+          color="white"
+          borderRadius={0}
+          animationDuration={0.4}
+        />
+      </motion.div>
     </MobileStyled>
   )
 }

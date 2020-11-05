@@ -5,6 +5,8 @@ import ContextWrapper from "components/ContextWrapper"
 import Header from "components/Header"
 import Footer from "components/Footer"
 
+import { AnimatePresence, motion } from "framer-motion"
+
 const theme = {
   colors: {
     primary: "#163C80",
@@ -15,16 +17,18 @@ const theme = {
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <ThemeProvider theme={theme}>
-        <GlobalStyles />
+      <AnimatePresence>
+        <ThemeProvider theme={theme}>
+          <GlobalStyles />
 
-        <ContextWrapper>
-          <Header />
-        </ContextWrapper>
+          <ContextWrapper>
+            <Header />
+          </ContextWrapper>
 
-        <Component {...pageProps} />
-        <Footer />
-      </ThemeProvider>
+          <Component {...pageProps} />
+          <Footer />
+        </ThemeProvider>
+      </AnimatePresence>
     </>
   )
 }

@@ -1,18 +1,25 @@
 import styled from "@emotion/styled"
 import Link from "next/link"
 
+import { motion } from "framer-motion"
+import { fadeInUp } from "components/animation"
+
+// Motion variables
+
 export default function OutletCard({ item }) {
   return (
-    <CardStyled>
-      <img src={`images/outlet/${item.gambar}`} alt={item.dealer} />
-      <p className="label">{item.category}</p>
-      <h3>{item.dealer}</h3>
-      <p> {item.telepon}</p>
-      <p>{item.lokasi}</p>
-      <Link href="/outlet">
-        <a className="link_primary">Kunjungi Website Outlet</a>
-      </Link>
-    </CardStyled>
+    <motion.div variants={fadeInUp}>
+      <CardStyled>
+        <img src={`images/outlet/${item.gambar}`} alt={item.dealer} />
+        <p className="label">{item.category}</p>
+        <h3>{item.dealer}</h3>
+        <p> {item.telepon}</p>
+        <p>{item.lokasi}</p>
+        <Link href="/outlet">
+          <a className="link_primary">Kunjungi Website Outlet</a>
+        </Link>
+      </CardStyled>
+    </motion.div>
   )
 }
 
