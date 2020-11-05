@@ -17,7 +17,7 @@ export default function MobileMenu() {
         <HamburgerMenu
           isOpen={openMenu}
           menuClicked={() => setOpenMenu(!openMenu)}
-          width={17}
+          width={15}
           height={12}
           strokeWidth={2}
           rotate={180}
