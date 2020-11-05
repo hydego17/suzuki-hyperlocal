@@ -11,7 +11,7 @@ import ResponsiveMenu from "./ResponsiveMenu"
 import data from "data/db.json"
 
 import { motion } from "framer-motion"
-import { fadeInRight } from "components/animation"
+import { fade, fadeInRight } from "components/animation"
 
 export default function Header() {
   const { loading } = useContext(HeaderContext)
@@ -55,7 +55,9 @@ export default function Header() {
 
             {/* Burger Menu */}
 
-            <MobileMenu />
+            <motion.div variants={fade}>
+              <MobileMenu />
+            </motion.div>
 
             {/* Responsive Menu */}
             <ResponsiveMenu />

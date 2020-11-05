@@ -12,12 +12,12 @@ export default function MobileMenu() {
   const { openMenu, setOpenMenu } = useContext(HeaderContext)
 
   return (
-    <MobileStyled>
+    <MobileStyled onClick={() => setOpenMenu(!openMenu)}>
       <motion.div variants={fadeInLeft}>
         <HamburgerMenu
           isOpen={openMenu}
           menuClicked={() => setOpenMenu(!openMenu)}
-          width={15}
+          width={17}
           height={12}
           strokeWidth={2}
           rotate={180}
