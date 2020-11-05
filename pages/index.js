@@ -5,13 +5,12 @@ import styled from "@emotion/styled"
 import OutletCard from "components/Home/OutletCard"
 import ArticleCard from "components/Home/ArticleCard"
 import HomeFooter from "components/Home/HomeFooter"
-import Preloader from "components/preloader"
+import Preloader from "components/Preloader"
 
 import data from "../data/db.json"
 
 import { motion } from "framer-motion"
 import { fadeInUp, fadeInDown } from "components/animation"
-import { Head } from "next/document"
 
 export default function Home() {
   const [state, setState] = useState({})

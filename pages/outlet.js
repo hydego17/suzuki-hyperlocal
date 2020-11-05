@@ -4,7 +4,7 @@ import styled from "@emotion/styled"
 import SliderTop from "components/Outlet/SliderTop"
 import CarOutlet from "components/Outlet/CarOutlet"
 import OutletFooter from "components/Outlet/OutletFooter"
-import Preloader from "components/preloader"
+import Preloader from "components/Preloader"
 
 import { motion } from "framer-motion"
 import { fadeInUp } from "components/animation"
