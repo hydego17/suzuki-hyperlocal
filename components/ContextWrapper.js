@@ -4,6 +4,9 @@ import HeaderContext from "../Contexts/HeaderContext"
 import data from "../data/db.json"
 
 export default function ContextWrapper({ children }) {
+  //Loading state
+  const [loading, setLoading] = useState(true)
+
   // check current route to set nav state
   const router = useRouter()
   const checkRouter = router.pathname
@@ -22,7 +25,14 @@ export default function ContextWrapper({ children }) {
 
   return (
     <HeaderContext.Provider
-      value={{ openMenu, setOpenMenu, homeNavs, setHomeNavs }}
+      value={{
+        openMenu,
+        setOpenMenu,
+        homeNavs,
+        setHomeNavs,
+        loading,
+        setLoading,
+      }}
     >
       {children}
     </HeaderContext.Provider>

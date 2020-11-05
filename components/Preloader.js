@@ -1,6 +1,11 @@
+import { useContext } from "react"
+import HeaderContext from "../Contexts/HeaderContext"
+
 import styled from "@emotion/styled"
 
-export default function Preloader({ loading }) {
+export default function Preloader() {
+  const { loading } = useContext(HeaderContext)
+
   return (
     <LoaderStyled loading={loading ? 1 : 0}>
       <div className="preloader_content">

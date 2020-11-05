@@ -10,7 +10,7 @@ import { motion } from "framer-motion"
 import { fadeInRight } from "components/animation"
 
 export default function Header() {
-  const { homeNavs } = useContext(HeaderContext)
+  const { homeNavs, loading } = useContext(HeaderContext)
   const { header } = homeNavs
 
   return (
@@ -19,28 +19,35 @@ export default function Header() {
         <title>Suzuki HyperLocal</title>
         <link rel="icon" href="images/logo.png" />
       </Head>
-      <motion.div initial={"initial"} animate={"animate"} exit={{ opacity: 0 }}>
-        <HeaderStyled>
-          <Link href="/">
-            <motion.a variants={fadeInRight} className="logo_container">
-              <div className="logo">
-                <img src="images/logo.png" alt="suzuki" />
-              </div>
-              <div className="logo_text">
-                <h3>{header.bigtext}</h3>
-                <p>{header.smalltext}</p>
-              </div>
-            </motion.a>
-          </Link>
 
-          {/* Burger Menu */}
+      {!loading && (
+        <motion.div
+          initial={"initial"}
+          animate={"animate"}
+          exit={{ opacity: 0 }}
+        >
+          <HeaderStyled>
+            <Link href="/">
+              <motion.a variants={fadeInRight} className="logo_container">
+                <div className="logo">
+                  <img src="images/logo.png" alt="suzuki" />
+                </div>
+                <div className="logo_text">
+                  <h3>{header.bigtext}</h3>
+                  <p>{header.smalltext}</p>
+                </div>
+              </motion.a>
+            </Link>
 
-          <MobileMenu />
+            {/* Burger Menu */}
 
-          {/* Responsive Menu */}
-          <ResponsiveMenu />
-        </HeaderStyled>
-      </motion.div>
+            <MobileMenu />
+
+            {/* Responsive Menu */}
+            <ResponsiveMenu />
+          </HeaderStyled>
+        </motion.div>
+      )}
     </>
   )
 }

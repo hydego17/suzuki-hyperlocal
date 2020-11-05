@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useContext } from "react"
+import HeaderContext from "../Contexts/HeaderContext"
 import Link from "next/link"
 import styled from "@emotion/styled"
 
@@ -13,9 +14,10 @@ import { motion } from "framer-motion"
 import { fadeInUp, fadeInDown } from "components/animation"
 
 export default function Home() {
+  const { loading, setLoading } = useContext(HeaderContext)
+
   const [state, setState] = useState({})
   const { outlet, article } = state
-  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     setLoading(true)
@@ -29,7 +31,7 @@ export default function Home() {
   return (
     <>
       {loading ? (
-        <Preloader loading={loading} />
+        <Preloader />
       ) : (
         <motion.div
           initial={"initial"}

@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react"
+import { useContext, useEffect } from "react"
+import HeaderContext from "../Contexts/HeaderContext"
 import styled from "@emotion/styled"
 
 import SliderTop from "components/Outlet/SliderTop"
@@ -10,7 +11,7 @@ import { motion } from "framer-motion"
 import { fadeInUp } from "components/animation"
 
 export default function OutletPage() {
-  const [loading, setLoading] = useState(true)
+  const { loading, setLoading } = useContext(HeaderContext)
 
   useEffect(() => {
     setLoading(true)
@@ -23,7 +24,7 @@ export default function OutletPage() {
   return (
     <>
       {loading ? (
-        <Preloader loading={loading} />
+        <Preloader />
       ) : (
         <motion.div
           initial={"initial"}
