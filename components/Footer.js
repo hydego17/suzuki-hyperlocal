@@ -1,9 +1,17 @@
-import React from "react"
+import styled from "@emotion/styled"
 
 export default function Footer() {
   return (
-    <div>
-      <h1>Footer</h1>
-    </div>
+    <FooterStyled>
+      © 2020 Suzuki Indonesia. <br />
+      All rights reserved.
+    </FooterStyled>
   )
 }
+
+const FooterStyled = styled.div`
+  background: ${({ theme }) => theme.colors.primary};
+  padding: 2rem 0;
+  text-align: center;
+  color: white;
+`

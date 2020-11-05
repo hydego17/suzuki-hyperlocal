@@ -1,0 +1,76 @@
+{
+  "dealer": [
+    {
+      "id": 1,
+      "dealer": "SUZUKI NJS SOEKARNO-HATTA",
+      "category": "Sales, Service, Sparepart",
+      "telepon": "(022) 6204645",
+      "lokasi": "JL. Soekarno Hatta No. 289 Bandung 40234",
+      "gambar": "soekarno-hatta.png"
+    },
+    {
+      "id": 2,
+      "dealer": "SUZUKI NJS RANCAEKEK",
+      "category": "Sales, Service, Sparepart",
+      "telepon": "(022) 87836800",
+      "lokasi": "JL. Raya Rancaekek Cipasir KM. 22 Rancaekek",
+      "gambar": "rancaekek.png"
+    },
+    {
+      "id": 3,
+      "dealer": "SUZUKI NJS SETIABUDHI",
+      "category": "Sales, Service, Sparepart",
+      "telepon": "(022) 2030787",
+      "lokasi": "JL. DR. Setiabudhi No. 78 Bandung",
+      "gambar": "setiabudhi.png"
+    },
+    {
+      "id": 4,
+      "dealer": "SUZUKI NJS DAGO",
+      "category": "Sales",
+      "telepon": "(022) 6002512",
+      "lokasi": "JL. IR.H. Juanda (Dago) No. 75 Bandung",
+      "gambar": "dago.png"
+    },
+    {
+      "id": 5,
+      "dealer": "SUZUKI NJS KOPO",
+      "category": "Sales",
+      "telepon": "(022) 5422259",
+      "lokasi": "JL. Kopo (Sayati) 260 C Bandung",
+      "gambar": "kopo.png"
+    },
+    {
+      "id": 6,
+      "dealer": "SUZUKI NJS AHMAD YANI",
+      "category": "Sales, Service, Sparepart",
+      "telepon": "(022) 7101655",
+      "lokasi": "JL. Jenderal Ahmad Yani 259 Bandung",
+      "gambar": "ahmad-yani.png"
+    },
+    {
+      "id": 7,
+      "dealer": "SUZUKI NJS BUAH BATU",
+      "category": "Sales, Service, Sparepart",
+      "telepon": "(022) 7300723",
+      "lokasi": "JL. Soekarno – Hatta No. 513 Bandung",
+      "gambar": "buah-batu.png"
+    },
+    {
+      "id": 8,
+      "dealer": "SUZUKI NJS CIBEUREUM",
+      "category": "Sales, Service, Sparepart",
+      "telepon": "(022) 6204645",
+      "lokasi": "JL. Raya Cibeureum 48 B Bandung",
+      "gambar": "cibeureum.png"
+    },
+    {
+      "id": 9,
+      "dealer": "SUZUKI NJS SOEKARNO - HATTA",
+      "category": "Sales, Service, Sparepart, Body Paint",
+      "telepon": "(022) 6204645",
+      "lokasi": "JL. Soekarno Hatta No. 289 Bandung 40234",
+      "gambar": "soekarno-hatta.png"
+    }
+  ]
+}
