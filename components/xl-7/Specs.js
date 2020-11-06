@@ -13,7 +13,6 @@ import data from "data/db.json"
 
 export default function Specs() {
   const { dimensi } = data
-  console.log(dimensi)
   const [isOpen, setIsOpen] = useState(false)
 
   const toggle = () => setIsOpen(!isOpen)
@@ -21,10 +20,12 @@ export default function Specs() {
   return (
     <SpecsStyled>
       {/* Specs */}
-      <h4>SPESIFIKASI</h4>
+      <h5>SPESIFIKASI</h5>
       <Card>
         <a onClick={toggle}>
-          <CardHeader>Dimensi</CardHeader>
+          <CardHeader>
+            <strong>Dimensi</strong>
+          </CardHeader>
         </a>
       </Card>
 
@@ -46,17 +47,23 @@ export default function Specs() {
       </Collapse>
 
       <Card>
-        <CardHeader>Mesin</CardHeader>
+        <CardHeader>
+          <strong>Mesin</strong>
+        </CardHeader>
       </Card>
       <Card>
-        <CardHeader>Transmisi</CardHeader>
+        <CardHeader>
+          <strong>Transmisi</strong>
+        </CardHeader>
       </Card>
       <Card>
-        <CardHeader>Berat</CardHeader>
+        <CardHeader>
+          <strong>Berat</strong>
+        </CardHeader>
       </Card>
 
       {/* Specs */}
-      <h4>DAFTAR HARGA</h4>
+      <h5>DAFTAR HARGA</h5>
 
       <a className="link_primary" href="#">
         Lihat Semua Harga Mobil
@@ -70,6 +77,10 @@ const SpecsStyled = styled.div`
   flex-direction: column;
   padding: 1rem;
 
+  h5 {
+    text-align: center;
+    padding: 1rem 0;
+  }
   .card-header {
     cursor: pointer;
   }

@@ -3,6 +3,7 @@ import { useRouter } from "next/router"
 import HeaderContext from "../Contexts/HeaderContext"
 import styled from "@emotion/styled"
 
+import Navigation from "components/xl-7/Navigation"
 import SliderTop from "components/xl-7/SliderTop"
 import CarVariants from "components/xl-7/CarVariants"
 import CarGallery from "components/xl-7/CarGallery"
@@ -42,20 +43,26 @@ export default function CarPage() {
         >
           <OutletStyled>
             <div className="container">
+              <Navigation />
               {/* Slider */}
-              <motion.div variants={fadeInUp}>
+              <motion.div id="overview" variants={fadeInUp}>
                 <SliderTop />
               </motion.div>
 
               {/* Car Variants */}
-
-              <CarVariants />
+              <div id="carVariants">
+                <CarVariants />
+              </div>
 
               {/* Gallery */}
-              <CarGallery />
+              <div id="carGallery">
+                <CarGallery />
+              </div>
 
               {/* Spec & Price */}
-              <Specs />
+              <div id="carSpecs">
+                <Specs />
+              </div>
             </div>
           </OutletStyled>
         </motion.div>

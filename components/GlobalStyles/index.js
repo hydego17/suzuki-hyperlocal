@@ -48,6 +48,7 @@ const GlobalStyles = () => (
 
         html,
         body {
+          scroll-behavior: smooth;
           min-height: 100%;
           font-family: -apple-system, BlinkMacSystemFont, SFProDisplay,
             Helvetica Neue, sans-serif;
