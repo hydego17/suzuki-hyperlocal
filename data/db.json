@@ -120,5 +120,45 @@
       { "id": 5, "nama": "Sparepart" },
       { "id": 6, "nama": "Hubungi Kami" }
     ]
-  }
+  },
+  "PassengerCar": [
+    {
+      "id": 1,
+      "mobil": "XL 7",
+      "harga": "Rp 232.000.000",
+      "gambar": "mobil-1.png"
+    },
+    {
+      "id": 2,
+      "mobil": "All New Ertiga",
+      "harga": "Rp 207.000.000",
+      "gambar": "mobil-2.png"
+    },
+    {
+      "id": 3,
+      "mobil": "All New Ertiga Suzuki Sport",
+      "harga": "Rp 252.000.000",
+      "gambar": "mobil-3.png"
+    },
+    {
+      "id": 4,
+      "mobil": "New Ignis",
+      "harga": "Rp 171.000.000",
+      "gambar": "mobil-4.png"
+    }
+  ],
+  "CommercialCar": [
+    {
+      "id": 1,
+      "mobil": "New Carry Pick-Up",
+      "harga": "Rp 145.600.000",
+      "gambar": "mobil-5.png"
+    },
+    {
+      "id": 2,
+      "mobil": "New Carry Luxury",
+      "harga": "Rp 159.100.000",
+      "gambar": "mobil-6.png"
+    }
+  ]
 }

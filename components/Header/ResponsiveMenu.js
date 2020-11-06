@@ -75,10 +75,10 @@ const ResponsiveNav = styled.div`
   `}
 
   a {
-    font-size: 1.3rem;
-    font-weight: bolder;
+    font-size: 1.2rem;
+    font-weight: 500;
     display: ${({ openMenu }) => (openMenu ? "block" : "none")};
-    padding: 1rem 0;
+    padding: 0.75rem 0;
     transition: transform 0.5s ease;
 
     &:hover {

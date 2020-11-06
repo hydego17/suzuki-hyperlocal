@@ -4,12 +4,12 @@ import HeaderContext from "../Contexts/HeaderContext"
 import styled from "@emotion/styled"
 
 import SliderTop from "components/Outlet/SliderTop"
-import CarOutlet from "components/Outlet/CarOutlet"
+import CarTabs from "components/Outlet/CarTabs"
 import OutletFooter from "components/Outlet/OutletFooter"
 import Preloader from "components/Preloader"
 
 import { motion } from "framer-motion"
-import { fadeInUp } from "components/animation"
+import { fade, fadeInUp } from "components/animation"
 
 import data from "../data/db.json"
 
@@ -23,7 +23,7 @@ export default function Outlet() {
     setLoading(true)
     const timing = setTimeout(() => {
       setLoading(false)
-    }, 1000)
+    }, 500)
 
     return () => clearTimeout(timing)
   }, [])
@@ -45,8 +45,9 @@ export default function Outlet() {
                 <SliderTop />
               </motion.div>
 
-              {/* Car */}
-              <CarOutlet />
+              {/* Car Tabs */}
+
+              <CarTabs />
 
               {/* Services */}
               <div>
@@ -67,7 +68,9 @@ export default function Outlet() {
 }
 
 const OutletStyled = styled.div`
+  background-color: #f1f5f6;
   .container {
-    padding: 4rem 0;
+    background: white;
+    padding: 4rem 0 0 0;
   }
 `

@@ -18,6 +18,7 @@ export default function Preloader() {
 
 const LoaderStyled = styled.div`
   position: fixed;
+  opacity: 1;
   top: 0;
   left: 0;
   right: 0;
@@ -38,7 +39,6 @@ const LoaderStyled = styled.div`
     `
     opacity: 0;
     visibility: hidden;
-    transition-delay: 430ms;
     
   `}
 

@@ -1,5 +1,6 @@
 import { Global, css } from "@emotion/core"
 
+const primary = "#163C80"
 const GlobalStyles = () => (
   <>
     <Global
@@ -12,22 +13,47 @@ const GlobalStyles = () => (
           -webkit-font-smoothing: antialiased;
           text-rendering: optimizeLegibility;
         }
+        @font-face {
+          font-family: "SFProDisplay";
+          src: url("fonts/SFProDisplay-Thin.woff2") format("woff2");
+          font-weight: 200;
+        }
 
         @font-face {
-          font-family: "SFProDisplay-Regular";
-          src: url("fonts/SFProDisplay-Regular.woff") format("woff"),
-            url("fonts/SFProDisplay-Regular.woff2") format("woff2");
-          font-weight: normal;
-          font-style: normal;
+          font-family: "SFProDisplay";
+          src: url("fonts/SFProDisplay-Light.woff2") format("woff2");
+          font-weight: 300;
+        }
+
+        @font-face {
+          font-family: "SFProDisplay";
+          src: url("fonts/SFProDisplay-Regular.woff2") format("woff2");
+          font-weight: 400;
+        }
+        @font-face {
+          font-family: "SFProDisplay";
+          src: url("fonts/SFProDisplay-Medium.woff2") format("woff2");
+          font-weight: 500;
+        }
+        @font-face {
+          font-family: "SFProDisplay";
+          src: url("fonts/SFProDisplay-Semibold.woff2") format("woff2");
+          font-weight: 600;
+        }
+        @font-face {
+          font-family: "SFProDisplay";
+          src: url("fonts/SFProDisplay-Bold.woff2") format("woff2");
+          font-weight: 700;
         }
 
         html,
         body {
           min-height: 100%;
-          font-family: -apple-system, BlinkMacSystemFont, SFProDisplay-Regular,
+          font-family: -apple-system, BlinkMacSystemFont, SFProDisplay,
             Helvetica Neue, sans-serif;
           font-size: 15px;
           letter-spacing: 0.5px;
+          color: rgb(37, 37, 37);
         }
 
         h1 {
@@ -103,6 +129,17 @@ const GlobalStyles = () => (
             color: white;
             background-color: #163c80;
           }
+        }
+
+        .banner {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 300px;
+          color: white;
+          background: ${primary};
+          text-align: center;
         }
 
         .label {

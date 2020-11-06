@@ -23,7 +23,7 @@ export default function Home() {
     const timing = setTimeout(() => {
       setState(data)
       setLoading(false)
-    }, 1000)
+    }, 750)
 
     return () => clearTimeout(timing)
   }, [])
@@ -77,16 +77,6 @@ export default function Home() {
 
 const HomeStyled = styled.div`
   background-color: #f1f5f6;
-  .banner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 300px;
-    color: white;
-    background: ${({ theme }) => theme.colors.primary};
-    text-align: center;
-  }
 
   .container.card1 {
     transform: translateY(-2%);
