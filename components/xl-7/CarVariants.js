@@ -65,7 +65,9 @@ export default function CarVariants() {
           {types.map((color, index) => (
             <li
               key={index}
-              className={`color_option ` + color}
+              className={
+                `color_option ` + color + (warna === color ? " active" : "")
+              }
               onClick={() => setWarna(color)}
             ></li>
           ))}
@@ -91,9 +93,13 @@ const CarVariantsStyled = styled.div`
   }
   .color_option {
     margin-right: 1rem;
-    border: 2px solid grey;
+    border: 3px solid gray;
     border-radius: 50%;
     padding: 1rem;
+
+    &.active {
+      border: 3px solid ${({ theme }) => theme.colors.primary};
+    }
 
     &.orange {
       background-color: #c04c3c;

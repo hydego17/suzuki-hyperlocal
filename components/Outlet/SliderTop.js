@@ -24,23 +24,4 @@ export default function SliderTop() {
   )
 }
 
-const SliderTopStyled = styled.div`
-  .swiper-button-prev,
-  .swiper-button-next {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.8);
-    color: black;
-
-    &:after {
-      font-weight: bold;
-      font-size: 15px;
-    }
-  }
-  .swiper-pagination {
-  }
-  .swiper-pagination-bullet-active {
-    background: white;
-  }
-`
+const SliderTopStyled = styled.div``

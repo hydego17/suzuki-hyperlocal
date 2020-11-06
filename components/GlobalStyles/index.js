@@ -169,6 +169,26 @@ const GlobalStyles = () => (
           border: 1px solid rgba(31, 117, 225, 0.63);
           padding: 3px 8px;
         }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background-color: rgba(255, 255, 255, 0.8);
+          color: black;
+
+          &:after {
+            font-weight: bold;
+            font-size: 15px;
+          }
+        }
+        .swiper-pagination {
+          margin-bottom: 20px;
+        }
+        .swiper-pagination-bullet-active {
+          background: white;
+        }
       `}
     />
   </>
