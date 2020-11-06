@@ -191,5 +191,66 @@
       "category": "Radius Putar Minimum",
       "value": "200 mm"
     }
-  ]
+  ],
+  "mobil": {
+    "alpha": [
+      {
+        "nama": "RISING ORANGE + BLACK",
+        "warna": "orange"
+      },
+      {
+        "nama": "BRAVE KAKHI + BLACK",
+        "warna": "kakhi"
+      },
+      {
+        "nama": "PRIME COOL BLACK",
+        "warna": "black"
+      },
+      {
+        "nama": "PRIME SNOW WHITE",
+        "warna": "white"
+      }
+    ],
+    "beta": [
+      {
+        "nama": "PEARL BURGUNDY RED",
+        "warna": "purple"
+      },
+      {
+        "nama": "METALLIC MAGMA GREY",
+        "warna": "grey"
+      },
+      {
+        "nama": "PEARL SNOW WHITE",
+        "warna": "white"
+      },
+      {
+        "nama": "PRIME COOL BLACK",
+        "warna": "black"
+      }
+    ],
+    "zeta": [
+      {
+        "nama": "PEARL SNOW WHITE",
+        "warna": "white"
+      },
+      {
+        "nama": "METALLIC MAGMA GREY",
+        "warna": "grey"
+      },
+      {
+        "nama": "PEARL BURGUNDY RED",
+        "warna": "purple"
+      },
+      {
+        "nama": "PRIME COOL BLACK",
+        "warna": "black"
+      }
+    ]
+  },
+  "warnaMobil": {
+    "warnaAlpha": ["orange", "kakhi", "black", "white"],
+    "warnaBeta": ["purple", "grey", "white", "black"],
+    "warnaZeta": ["white", "black", "grey", "purple"]
+  }
 }
