@@ -12,7 +12,7 @@ export default function OutletCard({ item }) {
       <CardStyled>
         <img src={`images/outlet/${item.gambar}`} alt={item.dealer} />
         <p className="label">{item.category}</p>
-        <h3>{item.dealer}</h3>
+        <h5>{item.dealer}</h5>
         <p> {item.telepon}</p>
         <p>{item.lokasi}</p>
         <Link href="/[slug]" as={`/${item.slug}`}>

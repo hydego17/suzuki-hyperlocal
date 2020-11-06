@@ -6,13 +6,13 @@ export default function Footer() {
       <FooterStyled>
         <hr />
         <div className="container">
-          <h1>HOTLINE 24 JAM (Bebas Pulsa)</h1>
+          <h5>HOTLINE 24 JAM (Bebas Pulsa)</h5>
 
           <a href="/">
             <img src="images/halosuzuki.png" />
           </a>
 
-          <h1>Download My Suzuki</h1>
+          <h5>Download My Suzuki</h5>
           <a href="/">
             <img src="images/mysuzuki.png" />
           </a>
@@ -33,7 +33,7 @@ export default function Footer() {
 const FooterStyled = styled.div`
   text-align: center;
 
-  h1 {
+  h5 {
     margin: 0.5rem 0;
   }
 

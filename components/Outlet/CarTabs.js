@@ -1,25 +1,21 @@
 import { useState } from "react"
 import styled from "@emotion/styled"
+import Link from "next/link"
 
 import { motion } from "framer-motion"
 import { fade, fadeInUp } from "components/animation"
 import data from "data/db.json"
 
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs"
-import "react-tabs/style/react-tabs.css"
-
 export default function CarOutlet() {
   const { PassengerCar, CommercialCar } = data
   const [cars, setCars] = useState(PassengerCar)
 
-  console.log(cars)
-
   return (
     <TabsTyled>
       <motion.div variants={fade} className="banner">
-        <motion.h1 variants={fadeInUp}>
+        <motion.h4 variants={fadeInUp}>
           Temukan Mobil Suzuki yang tepat untuk Anda
-        </motion.h1>
+        </motion.h4>
       </motion.div>
       <div className="selector">
         <a
@@ -37,19 +33,21 @@ export default function CarOutlet() {
       </div>
       <ul>
         {cars.map((item) => (
-          <a href="/">
-            <li key={item.id}>
-              <div className="car_image">
-                <img src={`images/CarsTab/${item.gambar}`} alt="" />
-              </div>
-              <div className="car_info">
-                <h1>{item.mobil}</h1>
-                <small>Mulai dari</small>
-                <p>{item.harga}</p>
-                <p className="label">Lihat Detail</p>
-              </div>
-            </li>
-          </a>
+          <Link key={item.id} href="/xl-7">
+            <a>
+              <li>
+                <div className="car_image">
+                  <img src={`images/CarsTab/${item.gambar}`} alt="" />
+                </div>
+                <div className="car_info">
+                  <h5>{item.mobil}</h5>
+                  <small>Mulai dari</small>
+                  <p>{item.harga}</p>
+                  <p className="label">Lihat Detail</p>
+                </div>
+              </li>
+            </a>
+          </Link>
         ))}
       </ul>
 
@@ -64,6 +62,7 @@ const TabsTyled = styled.div`
   display: flex;
   flex-direction: column;
   .banner {
+    padding: 1rem;
     height: 150px;
   }
 
@@ -82,6 +81,7 @@ const TabsTyled = styled.div`
       cursor: pointer;
 
       &.active {
+        color: inherit;
         border-bottom: 5px solid white;
       }
     }
@@ -91,7 +91,7 @@ const TabsTyled = styled.div`
     li {
       align-items: center;
       display: flex;
-      padding: 2rem;
+      padding: 2rem 1.5rem;
       border-bottom: 1px solid #eeeaea;
 
       img {
@@ -99,10 +99,12 @@ const TabsTyled = styled.div`
       }
     }
   }
-
+  h5 {
+    font-size: 1rem;
+  }
   .car_image {
     width: 50%;
-    padding-right: 15px;
+    padding-right: 10px;
   }
 
   .link_primary {

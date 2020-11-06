@@ -160,5 +160,36 @@
       "harga": "Rp 159.100.000",
       "gambar": "mobil-6.png"
     }
+  ],
+
+  "dimensi": [
+    {
+      "category": "Panjang Keseluruhan",
+      "value": "4,450 mm"
+    },
+    {
+      "category": "Lebar Keseluruhann",
+      "value": "1,775 mm"
+    },
+    {
+      "category": "Jarak Poros Roda",
+      "value": "2,740 mm"
+    },
+    {
+      "category": "Jarak Pijak Belakang",
+      "value": "1,530 mm"
+    },
+    {
+      "category": "Tinggi Keseluruhan",
+      "value": "1,710 mm"
+    },
+    {
+      "category": "Jarak Terendah",
+      "value": "5,1"
+    },
+    {
+      "category": "Radius Putar Minimum",
+      "value": "200 mm"
+    }
   ]
 }

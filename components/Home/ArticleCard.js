@@ -5,7 +5,7 @@ export default function ArticleCard({ item }) {
     <ArticleStyled>
       <img src={`images/article/${item.gambar}`} />
       <p> {item.tanggal}</p>
-      <h3>{item.judul}</h3>
+      <h5>{item.judul}</h5>
     </ArticleStyled>
   )
 }

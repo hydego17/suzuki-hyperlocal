@@ -41,12 +41,12 @@ export default function Header() {
 
                 {myData ? (
                   <div className="logo_text">
-                    <h3>{myData.dealer}</h3>
+                    <h6>{myData.dealer}</h6>
                     <p>PT. Nusantara Jaya Sentosa</p>
                   </div>
                 ) : (
                   <div className="logo_text">
-                    <h3>PT. Nusantara Jaya Sentosa</h3>
+                    <h6>PT. Nusantara Jaya Sentosa</h6>
                     <p>Main Dealer Suzuki Jawa Barat</p>
                   </div>
                 )}

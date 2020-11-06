@@ -20,7 +20,7 @@ export default function HomeFooter() {
 
       <hr />
       <div className="container">
-        <h1>ALAMAT</h1>
+        <h4>ALAMAT</h4>
         <p>
           <strong>SUZUKI Nusantara Jaya Sentosa</strong> <br /> Jl. Soekarno -
           Hatta no. 289, Bojongloa Kidul Bandung 40234
@@ -47,7 +47,7 @@ const HomeFooterStyled = styled.div`
     flex-direction: column;
   }
 
-  h1 {
+  h4 {
     margin: 0.5rem 0;
   }
 

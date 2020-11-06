@@ -1,5 +1,5 @@
 import { Global, css } from "@emotion/core"
-
+import "bootstrap/dist/css/bootstrap.min.css"
 const primary = "#163C80"
 const GlobalStyles = () => (
   <>
@@ -56,9 +56,25 @@ const GlobalStyles = () => (
           color: rgb(37, 37, 37);
         }
 
-        h1 {
-          font-size: 18px;
-          line-height: 1.35;
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5,
+        .h6,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          margin: 0;
+          font-weight: 500;
+          line-height: 1.2;
+        }
+
+        p {
+          margin: 0;
         }
 
         hr {
@@ -69,7 +85,7 @@ const GlobalStyles = () => (
 
         a {
           color: inherit;
-          text-decoration: none;
+          text-decoration: none !important;
         }
 
         ul {
@@ -112,6 +128,7 @@ const GlobalStyles = () => (
         }
 
         .link_primary {
+          background-color: white;
           color: #163c80;
           text-align: center;
           display: block;

@@ -20,7 +20,7 @@ export default function OutletFooter({ myData }) {
 
       <hr />
       <div className="container">
-        <h1>ALAMAT</h1>
+        <h5>ALAMAT</h5>
         <p>
           <strong>{dealer}</strong> <br /> {lokasi}
         </p>
@@ -42,7 +42,7 @@ const OutletFooterStyled = styled.div`
     flex-direction: column;
   }
 
-  h1 {
+  h5 {
     margin: 0.5rem 0;
   }
 

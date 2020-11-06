@@ -40,9 +40,9 @@ export default function Home() {
           <HomeStyled>
             {/* Outlet View */}
             <div className="container banner">
-              <motion.h1 variants={fadeInDown}>
+              <motion.h4 variants={fadeInDown}>
                 Temukan Outlet Suzuki terdekat di daerah sekitar Anda
-              </motion.h1>
+              </motion.h4>
             </div>
 
             <div className="container card1">
@@ -52,7 +52,7 @@ export default function Home() {
 
             {/* Article View */}
             <div className="container banner">
-              <h1>Informasi Terbaru</h1>
+              <h4>Informasi Terbaru</h4>
               <p>Seputar Promo, Berita, Event dari Suzuki</p>
             </div>
             <div className="container card2">
