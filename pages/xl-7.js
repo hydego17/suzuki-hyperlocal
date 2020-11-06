@@ -8,13 +8,14 @@ import SliderTop from "components/xl-7/SliderTop"
 import CarVariants from "components/xl-7/CarVariants"
 import CarGallery from "components/xl-7/CarGallery"
 import Specs from "components/xl-7/Specs"
-
+import StickyTags from "components/xl-7/StickyTags"
 import Preloader from "components/Preloader"
 
 import { motion } from "framer-motion"
 import { fade, fadeInUp } from "components/animation"
 
 import data from "../data/db.json"
+import { CarouselIndicators } from "reactstrap"
 
 export default function CarPage() {
   const { loading, setLoading } = useContext(HeaderContext)
@@ -64,6 +65,9 @@ export default function CarPage() {
                 <Specs />
               </div>
             </div>
+
+            {/* Sticky tag */}
+            <StickyTags />
           </OutletStyled>
         </motion.div>
       )}

@@ -2,17 +2,25 @@ import { useContext } from "react"
 import HeaderContext from "../Contexts/HeaderContext"
 
 import styled from "@emotion/styled"
+import { motion, AnimatePresence } from "framer-motion"
 
 export default function Preloader() {
   const { loading } = useContext(HeaderContext)
 
   return (
-    <LoaderStyled loading={loading ? 1 : 0}>
-      <div className="preloader_content">
-        <img src="images/logo.png" alt="Suzuki" />
-        Mohon tunggu, <br /> sedang memuat konten..
-      </div>
-    </LoaderStyled>
+    <AnimatePresence exitBeforeEnter>
+      <LoaderStyled loading={loading ? 1 : 0}>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="preloader_content"
+        >
+          <img src="images/logo.png" alt="Suzuki" />
+          Mohon tunggu, <br /> sedang memuat konten...
+        </motion.div>
+      </LoaderStyled>
+    </AnimatePresence>
   )
 }
 
@@ -27,7 +35,7 @@ const LoaderStyled = styled.div`
   justify-content: center;
   align-items: center;
   flex-flow: column;
-  z-index: 99999;
+  z-index: 99;
   width: 100%;
   height: 100%;
   background-color: #fff;

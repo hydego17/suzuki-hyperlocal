@@ -32,23 +32,24 @@ export default function CarOutlet() {
         </a>
       </div>
       <ul>
-        {cars.map((item) => (
-          <Link key={item.id} href="/xl-7">
-            <a>
-              <li>
-                <div className="car_image">
-                  <img src={`images/CarsTab/${item.gambar}`} alt="" />
-                </div>
-                <div className="car_info">
-                  <h5>{item.mobil}</h5>
-                  <small>Mulai dari</small>
-                  <p>{item.harga}</p>
-                  <p className="label">Lihat Detail</p>
-                </div>
-              </li>
-            </a>
-          </Link>
-        ))}
+        {cars &&
+          cars.map((item) => (
+            <Link key={item.id} href="/xl-7">
+              <a>
+                <li>
+                  <div className="car_image">
+                    <img src={`images/CarsTab/${item.gambar}`} alt="" />
+                  </div>
+                  <div className="car_info">
+                    <h5>{item.mobil}</h5>
+                    <small>Mulai dari</small>
+                    <p>{item.harga}</p>
+                    <p className="label">Lihat Detail</p>
+                  </div>
+                </li>
+              </a>
+            </Link>
+          ))}
       </ul>
 
       <a className="link_primary" href="#">

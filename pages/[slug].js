@@ -8,6 +8,8 @@ import CarTabs from "components/Outlet/CarTabs"
 import OutletFooter from "components/Outlet/OutletFooter"
 import Preloader from "components/Preloader"
 
+import { FcViewDetails, FcInspection, FcAddressBook } from "react-icons/fc"
+import { SiWhatsapp } from "react-icons/si"
 import { motion } from "framer-motion"
 import { fade, fadeInUp } from "components/animation"
 
@@ -54,8 +56,27 @@ export default function Outlet() {
                 <img src="images/pesan-servis.png" />
                 <img src="images/sukucadang.png" />
               </div>
+            </div>
 
-              {/* Sticky tag */}
+            {/* Sticky tag */}
+            <div className="sticky_tags">
+              <ul>
+                <li>
+                  <SiWhatsapp className="wa" /> Whatsapp
+                </li>
+                <li>
+                  <FcAddressBook />
+                  Daftar Harga
+                </li>
+                <li>
+                  <FcViewDetails />
+                  Pesan Servis
+                </li>
+                <li>
+                  <FcInspection />
+                  Simulasi Kredit
+                </li>
+              </ul>
             </div>
           </OutletStyled>
 
@@ -72,5 +93,38 @@ const OutletStyled = styled.div`
   .container {
     background: white;
     padding: 4rem 0 0 0;
+  }
+
+  .sticky_tags {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    ul {
+      border-radius: 10px;
+      width: 90%;
+      background: white;
+      padding: 0.5rem 1rem;
+      margin: 1rem auto;
+      display: flex;
+      justify-content: space-around;
+      box-shadow: 0 4px 9px rgba(0, 0, 0, 0.14);
+    }
+    li {
+      cursor: pointer;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      font-size: 0.8rem;
+    }
+
+    svg {
+      margin: 5px 0;
+      font-size: 25px;
+
+      &.wa {
+        color: green;
+      }
+    }
   }
 `

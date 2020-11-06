@@ -1,6 +1,8 @@
 import { Global, css } from "@emotion/core"
 import "bootstrap/dist/css/bootstrap.min.css"
+
 const primary = "#163C80"
+
 const GlobalStyles = () => (
   <>
     <Global
@@ -182,6 +184,15 @@ const GlobalStyles = () => (
             font-weight: bold;
             font-size: 15px;
           }
+        }
+        .btn-primary {
+          background-color: ${primary};
+          border-color: ${primary};
+        }
+        .modal-dialog {
+          display: flex !important;
+          align-items: center !important;
+          min-height: calc(100% - 1rem) !important;
         }
         .swiper-pagination {
           margin-bottom: 20px;
