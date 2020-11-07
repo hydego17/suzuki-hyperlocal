@@ -18,7 +18,7 @@ export default function Specs() {
   const toggle = () => setIsOpen(!isOpen)
 
   const { harga } = data
-  console.log(harga)
+
   return (
     <SpecsStyled>
       {/* Specs */}
