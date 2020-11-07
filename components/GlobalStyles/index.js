@@ -200,6 +200,10 @@ const GlobalStyles = () => (
         .swiper-pagination-bullet-active {
           background: white;
         }
+        .card {
+          margin: 0.5rem 0;
+          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.09);
+        }
       `}
     />
   </>

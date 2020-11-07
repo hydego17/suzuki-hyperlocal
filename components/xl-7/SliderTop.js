@@ -42,7 +42,7 @@ export default function SliderTop() {
 
 const SliderTopStyled = styled.div`
   .banner {
-    margin-top: -5px;
+    margin-top: -1rem;
     padding: 1rem 2rem;
 
     .banner_links {

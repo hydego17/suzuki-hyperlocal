@@ -162,6 +162,33 @@
     }
   ],
 
+  "harga": [
+    {
+      "nama": "XL ZETA M/T",
+      "harga": "Rp 232.000.000"
+    },
+    {
+      "nama": "XL ZETA A/T",
+      "harga": "Rp 242.500.000"
+    },
+    {
+      "nama": "XL BETA M/T",
+      "harga": "Rp 248.500.000"
+    },
+    {
+      "nama": "XL BETA A/T",
+      "harga": "Rp 259.000.000"
+    },
+    {
+      "nama": "XL ALPHA M/T",
+      "harga": "Rp 258.500.000"
+    },
+    {
+      "nama": "XL ALPHA A/T",
+      "harga": "Rp 269.000.000"
+    }
+  ],
+
   "dimensi": [
     {
       "category": "Panjang Keseluruhan",

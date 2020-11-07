@@ -17,6 +17,8 @@ export default function Specs() {
 
   const toggle = () => setIsOpen(!isOpen)
 
+  const { harga } = data
+  console.log(harga)
   return (
     <SpecsStyled>
       {/* Specs */}
@@ -63,7 +65,22 @@ export default function Specs() {
       </Card>
 
       {/* Specs */}
-      <h5>DAFTAR HARGA</h5>
+      <h5>DAFTAR HARGA XL 7</h5>
+
+      {harga.map((item, index) => (
+        <Card key={index}>
+          <CardHeader>
+            <div className="row">
+              <div className="col">
+                <strong>{item.nama}</strong>
+              </div>
+              <div className="col">
+                <strong>{item.harga}</strong>
+              </div>
+            </div>
+          </CardHeader>
+        </Card>
+      ))}
 
       <a className="link_primary" href="#">
         Lihat Semua Harga Mobil
@@ -82,9 +99,10 @@ const SpecsStyled = styled.div`
     padding: 1rem 0;
   }
   .card-header {
+    text-align: center;
     cursor: pointer;
   }
   .link_primary {
-    margin: 1rem auto;
+    margin: 2rem auto;
   }
 `
