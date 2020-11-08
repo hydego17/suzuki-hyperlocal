@@ -18,23 +18,16 @@ export default function CarVariants() {
   const currentCar = car.find((c) => c.warna === warna)
 
   // Set Color options, Variant & color
-  const setAlpha = () => {
-    setTypes([...warnaAlpha])
-    setVariant("alpha")
-    setWarna("orange")
-    setCar(alpha)
+
+  const handleOptions = (types, variant, warna, car) => {
+    setTypes([...types])
+    setVariant(variant)
+    setWarna(warna)
+    setCar(car)
   }
-  const setBeta = () => {
-    setTypes([...warnaBeta])
-    setVariant("beta")
-    setWarna("purple")
-    setCar(beta)
-  }
-  const setZeta = () => {
-    setTypes([...warnaZeta])
-    setVariant("zeta")
-    setWarna("white")
-    setCar(zeta)
+
+  const chooseVariant = (v) => {
+    return variant === v ? "active" : ""
   }
 
   return (
@@ -43,15 +36,21 @@ export default function CarVariants() {
         <h4>Tipe & Warna</h4>
         <ul className="selector">
           <li
-            className={variant === "alpha" ? "active" : ""}
-            onClick={setAlpha}
+            className={chooseVariant("alpha")}
+            onClick={() => handleOptions(warnaAlpha, "alpha", "orange", alpha)}
           >
             XL Alpha
           </li>
-          <li className={variant === "beta" ? "active" : ""} onClick={setBeta}>
+          <li
+            className={chooseVariant("beta")}
+            onClick={() => handleOptions(warnaBeta, "beta", "purple", beta)}
+          >
             XL Beta
           </li>
-          <li className={variant === "zeta" ? "active" : ""} onClick={setZeta}>
+          <li
+            className={chooseVariant("zeta")}
+            onClick={() => handleOptions(warnaZeta, "zeta", "white", zeta)}
+          >
             XL Zeta
           </li>
         </ul>
