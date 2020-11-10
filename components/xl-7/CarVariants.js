@@ -18,7 +18,6 @@ export default function CarVariants() {
   const currentCar = car.find((c) => c.warna === warna)
 
   // Set Color options, Variant & color
-
   const handleOptions = (types, variant, warna, car) => {
     setTypes([...types])
     setVariant(variant)

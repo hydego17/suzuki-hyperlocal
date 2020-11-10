@@ -96,6 +96,7 @@ const OutletStyled = styled.div`
   }
 
   .sticky_tags {
+    z-index: 2;
     position: fixed;
     bottom: 0;
     width: 100%;

@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap"
+
 import styled from "@emotion/styled"
 
 import MyModal from "components/MyModal"
@@ -39,6 +39,7 @@ export default function StickyTags() {
 
 const StickyStyled = styled.div`
   .sticky_tags {
+    z-index: 2;
     position: fixed;
     bottom: 0;
     width: 100%;
