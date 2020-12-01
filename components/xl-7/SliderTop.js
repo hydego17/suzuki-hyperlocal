@@ -1,19 +1,19 @@
-import styled from "@emotion/styled"
-import { Swiper, SwiperSlide } from "swiper/react"
-import SwiperCore, { Navigation, Pagination } from "swiper"
-import "swiper/swiper-bundle.css"
+import styled from "@emotion/styled";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Navigation, Pagination } from "swiper";
+import "swiper/swiper-bundle.css";
 
-SwiperCore.use([Navigation, Pagination])
+SwiperCore.use([Navigation, Pagination]);
 
 export default function SliderTop() {
-  const slides = []
+  const slides = [];
 
   for (let i = 0; i < 5; i++) {
     slides.push(
       <SwiperSlide key={`slide-${i}`} tag="li">
         <img src="images/xl-7/slider-xl-7.png" />
       </SwiperSlide>
-    )
+    );
   }
   return (
     <SliderTopStyled>
@@ -22,7 +22,7 @@ export default function SliderTop() {
       </Swiper>
 
       <div className="banner">
-        <img src="images/xl-7/xl7-overview.png" alt="" />
+        <img src="images/xl-7/xl7-overview.png" alt="xl7-overview" />
 
         <p>
           Suzuki XL7 hadir dengan tampilan maskulin, tangguh dan berkarakter.
@@ -37,7 +37,7 @@ export default function SliderTop() {
         </div>
       </div>
     </SliderTopStyled>
-  )
+  );
 }
 
 const SliderTopStyled = styled.div`
@@ -68,4 +68,4 @@ const SliderTopStyled = styled.div`
   .swiper-pagination-bullet-active {
     background: white;
   }
-`
+`;

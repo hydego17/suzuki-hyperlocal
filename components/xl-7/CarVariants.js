@@ -1,33 +1,33 @@
-import { useState } from "react"
-import styled from "@emotion/styled"
+import { useState } from "react";
+import styled from "@emotion/styled";
 
-import data from "data/db.json"
+import data from "data/db.json";
 
 export default function CarVariants() {
   // set color options data to state
-  const { warnaAlpha, warnaBeta, warnaZeta } = data.warnaMobil
-  const [types, setTypes] = useState([...warnaAlpha])
+  const { warnaAlpha, warnaBeta, warnaZeta } = data.warnaMobil;
+  const [types, setTypes] = useState([...warnaAlpha]);
 
   // state for color & variant
-  const [variant, setVariant] = useState("alpha")
-  const [warna, setWarna] = useState("black")
+  const [variant, setVariant] = useState("alpha");
+  const [warna, setWarna] = useState("black");
 
   // set car name to state
-  const { alpha, beta, zeta } = data.mobil
-  const [car, setCar] = useState([...alpha])
-  const currentCar = car.find((c) => c.warna === warna)
+  const { alpha, beta, zeta } = data.mobil;
+  const [car, setCar] = useState([...alpha]);
+  const currentCar = car.find((c) => c.warna === warna);
 
   // Set Color options, Variant & color
-  const handleOptions = (types, variant, warna, car) => {
-    setTypes([...types])
-    setVariant(variant)
-    setWarna(warna)
-    setCar(car)
-  }
+  const handleOptions = async (types, variant, warna, car) => {
+    await setTypes([...types]);
+    await setVariant(variant);
+    await setCar(car);
+    await setWarna(warna);
+  };
 
   const chooseVariant = (v) => {
-    return variant === v ? "active" : ""
-  }
+    return variant === v ? "active" : "";
+  };
 
   return (
     <CarVariantsStyled>
@@ -56,7 +56,7 @@ export default function CarVariants() {
 
         <div>
           <img src={`images/xl-7/${variant}-${warna}.png`} />
-          <h5>{currentCar.nama}</h5>
+          <h5>{currentCar && currentCar.nama}</h5>
         </div>
 
         <ul>
@@ -72,7 +72,7 @@ export default function CarVariants() {
         </ul>
       </div>
     </CarVariantsStyled>
-  )
+  );
 }
 
 const CarVariantsStyled = styled.div`
@@ -140,4 +140,4 @@ const CarVariantsStyled = styled.div`
       }
     }
   }
-`
+`;
