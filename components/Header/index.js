@@ -1,23 +1,23 @@
-import { useContext } from "react"
-import Head from "next/head"
-import HeaderContext from "../../Contexts/HeaderContext"
+import { useContext } from "react";
+import Head from "next/head";
+import HeaderContext from "../../Contexts/HeaderContext";
 
-import styled from "@emotion/styled"
-import { useRouter } from "next/router"
-import Link from "next/link"
-import MobileMenu from "./MobileMenu"
-import ResponsiveMenu from "./ResponsiveMenu"
+import styled from "@emotion/styled";
+import { useRouter } from "next/router";
+import Link from "next/link";
+import MobileMenu from "./MobileMenu";
+import ResponsiveMenu from "./ResponsiveMenu";
 
-import data from "data/db.json"
+import data from "data/db.json";
 
-import { motion } from "framer-motion"
-import { fade, fadeInRight } from "components/animation"
+import { motion } from "framer-motion";
+import { fade, fadeInRight } from "components/animation";
 
 export default function Header() {
-  const { loading } = useContext(HeaderContext)
+  const { loading } = useContext(HeaderContext);
 
-  const router = useRouter()
-  const myData = data.outlet.find((o) => o.slug === router.query.slug)
+  const router = useRouter();
+  const myData = data.outlet.find((o) => o.slug === router.query.slug);
 
   return (
     <>
@@ -65,14 +65,14 @@ export default function Header() {
         </motion.div>
       )}
     </>
-  )
+  );
 }
 
 const HeaderStyled = styled.header`
   position: fixed;
   padding: 0.75rem 1rem;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
   background: white;
   box-shadow: 0 10px 10px -6px rgba(0, 0, 0, 0.1);
 
@@ -92,4 +92,4 @@ const HeaderStyled = styled.header`
       font-size: 0.7rem;
     }
   }
-`
+`;

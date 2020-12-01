@@ -1,18 +1,18 @@
-import { useContext } from "react"
-import HeaderContext from "../../Contexts/HeaderContext"
-import styled from "@emotion/styled"
+import { useContext } from "react";
+import HeaderContext from "../../Contexts/HeaderContext";
+import styled from "@emotion/styled";
 
-import Link from "next/link"
-import { useRouter } from "next/router"
+import Link from "next/link";
+import { useRouter } from "next/router";
 
-import data from "data/db.json"
+import data from "data/db.json";
 
 export default function ResponsiveMenu() {
-  const { openMenu, homeNavs } = useContext(HeaderContext)
-  const { links } = homeNavs
+  const { openMenu, homeNavs } = useContext(HeaderContext);
+  const { links } = homeNavs;
 
-  const router = useRouter()
-  const myData = data.outlet.find((o) => o.slug === router.query.slug)
+  const router = useRouter();
+  const myData = data.outlet.find((o) => o.slug === router.query.slug);
 
   return (
     <ResponsiveNav openMenu={openMenu} setOpenMenu={openMenu}>
@@ -44,7 +44,7 @@ export default function ResponsiveMenu() {
         All rights reserved.
       </p>
     </ResponsiveNav>
-  )
+  );
 }
 
 const ResponsiveNav = styled.div`
@@ -94,8 +94,19 @@ const ResponsiveNav = styled.div`
     display: flex;
     align-items: center;
 
+    a {
+      display: flex;
+      justify-content: center;
+
+      &:first-child {
+        flex: 2;
+      }
+
+      flex: 3;
+    }
+
     img {
-      max-width: 100%;
+      max-height: 60px;
     }
   }
-`
+`;
